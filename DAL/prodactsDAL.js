@@ -17,11 +17,9 @@ export async function getUser(username,password) {
 }
 
 export async function getAllProducts() {
-    console.log(6)
     const { data, error } = await supabase
     .from('prodacts')
     .select('*')
     if (error) throw error;
-    console.log(data)
     return data
 }
